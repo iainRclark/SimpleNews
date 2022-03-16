@@ -23,7 +23,7 @@ class Filters extends Component {
 
     render() {
         return (
-            <form className="filters">
+            <form className="filters p-2 bg-slate-700">
                 <DebounceInput 
                     name="search"
                     minLength={0}

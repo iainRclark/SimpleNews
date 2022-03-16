@@ -1,6 +1,5 @@
 .row {
   display: grid;
-  grid-gap: 10px;
   grid-template-columns: 250px auto;
   grid-template-rows: auto auto auto
 }
@@ -10,17 +9,17 @@
   width: 250px;
   object-fit: scale-down;
 }
-.row-title {
+.row-info {
   grid-column: 2 / span 2;
   grid-row: 1;
-  padding-top: 12px;
-  font-size: 20px;
-  font-weight: 700;
+  padding-top: 6px;
+  padding-left:8px;
 }
 .row-description {
   grid-column: 2 / span 2;
   grid-row: 2;
-  font-weight: 600;
+  font-weight: 300;
+  padding-left: 4px;
 }
 .row-details {
   grid-column: 2 / span 2;
@@ -31,9 +30,12 @@
   justify-content: center;
   position: sticky;
   top: 0px;
-  z-index: 2;
-  background-color: red;
 }
 .filter-item {
   width: 200px;
+  padding: 4px;
+  margin-left: 4px;
+  border-radius: 10px;
+  font-weight: 500;
+  color: rgb(61, 61, 61)
 }

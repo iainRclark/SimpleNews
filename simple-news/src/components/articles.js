@@ -91,17 +91,20 @@ class Articles extends Component {
     render() {
         return (
             <Fragment>
-                <Filters onFilterChange={this.onFilterChange.bind(this)}/> 
-                <InfiniteScroll 
-                    next={this.requestData.bind(this)}
-                    dataLength={this.state.articles.length}
-                    hasMore={this.state.totalResults > this.state.articles.length}
-                    loader={<h4>Loading...</h4>}
-                    endMessage={<h3>End of data</h3>}>
-                    {this.state.articles.map((article, index) => (
-                        <Article key={index} article={article}/>
-                    ))}
-                </InfiniteScroll>
+                <Filters onFilterChange={this.onFilterChange.bind(this)}/>
+                <div className='container mx-auto'>
+                    <InfiniteScroll 
+                        next={this.requestData.bind(this)}
+                        dataLength={this.state.articles.length}
+                        hasMore={this.state.totalResults > this.state.articles.length}
+                        loader={<h4>Loading...</h4>}
+                        endMessage={<h3>End of data</h3>}>
+                        {this.state.articles.map((article, index) => (
+                            <Article key={index} article={article}/>
+                        ))}
+                    </InfiniteScroll>
+                </div>
+
             </Fragment>
         );
     }
